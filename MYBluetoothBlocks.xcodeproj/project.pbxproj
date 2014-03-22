@@ -30,6 +30,8 @@
 		7FD2D4EF18DD3DA800EE682D /* MYSubscriberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2D4EE18DD3DA800EE682D /* MYSubscriberViewController.m */; };
 		7FD2D4F218DD401B00EE682D /* MYSubscribersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2D4F118DD401B00EE682D /* MYSubscribersTableViewController.m */; };
 		7FD2D4F518DD402E00EE682D /* MYChildClientTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2D4F418DD402E00EE682D /* MYChildClientTableViewController.m */; };
+		7FD2D4F818DDE43400EE682D /* MYClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2D4F718DDE43400EE682D /* MYClientViewController.m */; };
+		7FD2D4FB18DDE48D00EE682D /* MYServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2D4FA18DDE48D00EE682D /* MYServerViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -81,6 +83,11 @@
 		7FD2D4F118DD401B00EE682D /* MYSubscribersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYSubscribersTableViewController.m; sourceTree = "<group>"; };
 		7FD2D4F318DD402E00EE682D /* MYChildClientTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYChildClientTableViewController.h; sourceTree = "<group>"; };
 		7FD2D4F418DD402E00EE682D /* MYChildClientTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYChildClientTableViewController.m; sourceTree = "<group>"; };
+		7FD2D4F618DDE43400EE682D /* MYClientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYClientViewController.h; sourceTree = "<group>"; };
+		7FD2D4F718DDE43400EE682D /* MYClientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYClientViewController.m; sourceTree = "<group>"; };
+		7FD2D4F918DDE48D00EE682D /* MYServerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYServerViewController.h; sourceTree = "<group>"; };
+		7FD2D4FA18DDE48D00EE682D /* MYServerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYServerViewController.m; sourceTree = "<group>"; };
+		7FD2D4FC18DDE4E800EE682D /* MYUUID.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYUUID.h; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -141,11 +148,16 @@
 		7F3A3B8A18DBE4FC009B342D /* MYBluetoothBlocks */ = {
 			isa = PBXGroup;
 			children = (
+				7FD2D4FC18DDE4E800EE682D /* MYUUID.h */,
 				7F3A3B9318DBE4FC009B342D /* MYAppDelegate.h */,
 				7F3A3B9418DBE4FC009B342D /* MYAppDelegate.m */,
 				7F3A3B9618DBE4FC009B342D /* Main.storyboard */,
 				7F3A3B9918DBE4FC009B342D /* MYViewController.h */,
 				7F3A3B9A18DBE4FC009B342D /* MYViewController.m */,
+				7FD2D4F618DDE43400EE682D /* MYClientViewController.h */,
+				7FD2D4F718DDE43400EE682D /* MYClientViewController.m */,
+				7FD2D4F918DDE48D00EE682D /* MYServerViewController.h */,
+				7FD2D4FA18DDE48D00EE682D /* MYServerViewController.m */,
 				7FD2D4EA18DD3CF300EE682D /* MYChildClientViewController.h */,
 				7FD2D4EB18DD3CF300EE682D /* MYChildClientViewController.m */,
 				7FD2D4ED18DD3DA800EE682D /* MYSubscriberViewController.h */,
@@ -319,8 +331,10 @@
 				7F3A3B9518DBE4FC009B342D /* MYAppDelegate.m in Sources */,
 				7FD2D4F518DD402E00EE682D /* MYChildClientTableViewController.m in Sources */,
 				7F3A3BC618DBE51C009B342D /* MYBluetoothBlocksClient.m in Sources */,
+				7FD2D4FB18DDE48D00EE682D /* MYServerViewController.m in Sources */,
 				7F3A3BC718DBE51C009B342D /* MYBluetoothBlocksServer.m in Sources */,
 				7F3A3B9118DBE4FC009B342D /* main.m in Sources */,
+				7FD2D4F818DDE43400EE682D /* MYClientViewController.m in Sources */,
 				7FD2D4E918DD2E3100EE682D /* MYBluetoothBlocksSubscriber.m in Sources */,
 				7FD2D4EF18DD3DA800EE682D /* MYSubscriberViewController.m in Sources */,
 				7F3A3BC918DBE51C009B342D /* MYBluetoothBlocksPeripheral.m in Sources */,

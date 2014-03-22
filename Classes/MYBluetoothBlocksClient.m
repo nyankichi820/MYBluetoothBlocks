@@ -80,6 +80,15 @@ static MYBluetoothBlocksClient *instance = 0;
     self.didDiscoverCharacteristic = ^(CBPeripheral *peripheral,CBService *service,NSError *error){
         NSLog(@"CLIENT: discover characteristics");
         
+        for(MYBluetoothBlocksClient *child in self.childClients){
+            if([child.peripheral isEqual:peripheral] && [child.service isEqual:service]){
+                
+                return;
+            }
+            
+        }
+  
+        
         MYBluetoothBlocksClient *child = [[MYBluetoothBlocksClient alloc] init];
         child.didDiscoverServer = weakSelf.didDiscoverServer;
        

@@ -34,6 +34,19 @@
     
     __weak typeof(self) weakSelf = self;
     
+    self.childClient.didUpdateNotificationStateForCharacteristic =^(CBCharacteristic *characteristic,NSError *error){
+        NSString *readString = [[NSString alloc] initWithData:characteristic.value encoding:NSUTF8StringEncoding];
+        
+        NSLog(@"notify state change");
+        if(characteristic.isNotifying){
+            NSLog(@"notify start");
+        }
+        else{
+            NSLog(@"notify end");
+        }
+      
+    };
+
     
     self.childClient.didUpdateValueForCharacteristic = ^(CBCharacteristic *characteristic,NSError *error){
         NSString *readString = [[NSString alloc] initWithData:characteristic.value encoding:NSUTF8StringEncoding];
@@ -80,7 +93,7 @@
     
     for(CBCharacteristic *characteristic in self.childClient.service.characteristics){
         if(characteristic.properties & CBCharacteristicPropertyNotify){
-            NSLog(@"notify charastaristic");
+            NSLog(@"notify charastaristic %@",characteristic);
             if(!characteristic.isNotifying){
                 [self.childClient setNotifyValue:YES characteristic:characteristic];
                 [self.centralSubscribeButton setTitle:@"UnSubscribe" forState:UIControlStateNormal];
