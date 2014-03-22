@@ -21,6 +21,10 @@
 		7F3A3BA618DBE4FC009B342D /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7F3A3B8818DBE4FC009B342D /* UIKit.framework */; };
 		7F3A3BAE18DBE4FC009B342D /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 7F3A3BAC18DBE4FC009B342D /* InfoPlist.strings */; };
 		7F3A3BB018DBE4FC009B342D /* MYBluetoothBlocksTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3A3BAF18DBE4FC009B342D /* MYBluetoothBlocksTests.m */; };
+		7F3A3BC618DBE51C009B342D /* MYBluetoothBlocksClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3A3BBE18DBE51C009B342D /* MYBluetoothBlocksClient.m */; };
+		7F3A3BC718DBE51C009B342D /* MYBluetoothBlocksServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3A3BC018DBE51C009B342D /* MYBluetoothBlocksServer.m */; };
+		7F3A3BC818DBE51C009B342D /* MYBluetoothBlocksCentral.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3A3BC218DBE51C009B342D /* MYBluetoothBlocksCentral.m */; };
+		7F3A3BC918DBE51C009B342D /* MYBluetoothBlocksPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3A3BC418DBE51C009B342D /* MYBluetoothBlocksPeripheral.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +57,15 @@
 		7F3A3BAB18DBE4FC009B342D /* MYBluetoothBlocksTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "MYBluetoothBlocksTests-Info.plist"; sourceTree = "<group>"; };
 		7F3A3BAD18DBE4FC009B342D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		7F3A3BAF18DBE4FC009B342D /* MYBluetoothBlocksTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MYBluetoothBlocksTests.m; sourceTree = "<group>"; };
+		7F3A3BBC18DBE51C009B342D /* MYBluetoothBlocks.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYBluetoothBlocks.h; sourceTree = "<group>"; };
+		7F3A3BBD18DBE51C009B342D /* MYBluetoothBlocksClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYBluetoothBlocksClient.h; sourceTree = "<group>"; };
+		7F3A3BBE18DBE51C009B342D /* MYBluetoothBlocksClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYBluetoothBlocksClient.m; sourceTree = "<group>"; };
+		7F3A3BBF18DBE51C009B342D /* MYBluetoothBlocksServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYBluetoothBlocksServer.h; sourceTree = "<group>"; };
+		7F3A3BC018DBE51C009B342D /* MYBluetoothBlocksServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYBluetoothBlocksServer.m; sourceTree = "<group>"; };
+		7F3A3BC118DBE51C009B342D /* MYBluetoothBlocksCentral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYBluetoothBlocksCentral.h; sourceTree = "<group>"; };
+		7F3A3BC218DBE51C009B342D /* MYBluetoothBlocksCentral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYBluetoothBlocksCentral.m; sourceTree = "<group>"; };
+		7F3A3BC318DBE51C009B342D /* MYBluetoothBlocksPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYBluetoothBlocksPeripheral.h; sourceTree = "<group>"; };
+		7F3A3BC418DBE51C009B342D /* MYBluetoothBlocksPeripheral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYBluetoothBlocksPeripheral.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,6 +95,7 @@
 		7F3A3B7818DBE4FC009B342D = {
 			isa = PBXGroup;
 			children = (
+				7F3A3BB918DBE501009B342D /* Classes */,
 				7F3A3B8A18DBE4FC009B342D /* MYBluetoothBlocks */,
 				7F3A3BA918DBE4FC009B342D /* MYBluetoothBlocksTests */,
 				7F3A3B8318DBE4FC009B342D /* Frameworks */,
@@ -152,6 +166,22 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		7F3A3BB918DBE501009B342D /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				7F3A3BBC18DBE51C009B342D /* MYBluetoothBlocks.h */,
+				7F3A3BBD18DBE51C009B342D /* MYBluetoothBlocksClient.h */,
+				7F3A3BBE18DBE51C009B342D /* MYBluetoothBlocksClient.m */,
+				7F3A3BBF18DBE51C009B342D /* MYBluetoothBlocksServer.h */,
+				7F3A3BC018DBE51C009B342D /* MYBluetoothBlocksServer.m */,
+				7F3A3BC118DBE51C009B342D /* MYBluetoothBlocksCentral.h */,
+				7F3A3BC218DBE51C009B342D /* MYBluetoothBlocksCentral.m */,
+				7F3A3BC318DBE51C009B342D /* MYBluetoothBlocksPeripheral.h */,
+				7F3A3BC418DBE51C009B342D /* MYBluetoothBlocksPeripheral.m */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -200,6 +230,13 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = "masafumi yoshida";
 				TargetAttributes = {
+					7F3A3B8018DBE4FC009B342D = {
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
+					};
 					7F3A3BA118DBE4FC009B342D = {
 						TestTargetID = 7F3A3B8018DBE4FC009B342D;
 					};
@@ -250,9 +287,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7F3A3BC818DBE51C009B342D /* MYBluetoothBlocksCentral.m in Sources */,
 				7F3A3B9B18DBE4FC009B342D /* MYViewController.m in Sources */,
 				7F3A3B9518DBE4FC009B342D /* MYAppDelegate.m in Sources */,
+				7F3A3BC618DBE51C009B342D /* MYBluetoothBlocksClient.m in Sources */,
+				7F3A3BC718DBE51C009B342D /* MYBluetoothBlocksServer.m in Sources */,
 				7F3A3B9118DBE4FC009B342D /* main.m in Sources */,
+				7F3A3BC918DBE51C009B342D /* MYBluetoothBlocksPeripheral.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -461,6 +502,7 @@
 				7F3A3BB518DBE4FC009B342D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		7F3A3BB618DBE4FC009B342D /* Build configuration list for PBXNativeTarget "MYBluetoothBlocksTests" */ = {
 			isa = XCConfigurationList;
@@ -469,6 +511,7 @@
 				7F3A3BB818DBE4FC009B342D /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

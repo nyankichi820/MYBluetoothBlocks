@@ -13,6 +13,16 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions
 {
     // Override point for customization after application launch.
+    
+  
+    // if not live central manager and peripheral manager
+    NSArray *centralManagerIdentifiers = launchOptions[UIApplicationLaunchOptionsBluetoothCentralsKey];
+    NSLog(@"CENTRAL: restore identifiers count :%d",centralManagerIdentifiers.count);
+    
+    NSArray *peripheralManagerIdentifiers = launchOptions[UIApplicationLaunchOptionsBluetoothPeripheralsKey];
+    NSLog(@"PERIPHERAL: restore identifiers count :%d",peripheralManagerIdentifiers.count);
+  
+    
     return YES;
 }
 							

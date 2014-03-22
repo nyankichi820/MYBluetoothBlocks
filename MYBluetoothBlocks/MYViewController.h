@@ -9,5 +9,5 @@
 #import <UIKit/UIKit.h>
 
 @interface MYViewController : UIViewController
-
+@property(nonatomic,strong) IBOutlet UILabel *status;
 @end
