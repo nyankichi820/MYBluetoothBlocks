@@ -19,6 +19,6 @@ Pod::Spec.new do |s|
 
   s.source       = { :git => "https://github.com/nyankichi820/MYBluetoothBlocks.git", :tag => "#{s.version}" }
 
-  s.source_files  = 'MYRoutes/Classes'
+  s.source_files  = 'Classes'
 
 end
