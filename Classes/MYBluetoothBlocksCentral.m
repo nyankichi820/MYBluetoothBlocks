@@ -23,9 +23,8 @@
 }
 
 -(void) startCentral{
+    NSLog(@"CLIENT: start central");
     self.centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil];
-    
-    
     self.isRunning =TRUE;
     
     
@@ -34,6 +33,8 @@
 
 
 -(void)startCentralWithIdentifier:(NSString*)restoreIdentifirer{
+    NSLog(@"CLIENT: start central with identifirer %@",restoreIdentifirer);
+    
     self.centralManager = [[CBCentralManager alloc] initWithDelegate:self queue:nil options:@{ CBCentralManagerOptionRestoreIdentifierKey:restoreIdentifirer}];
     self.isRunning = TRUE;
     
@@ -44,7 +45,21 @@
     if(self.centralManager != nil){
         [self.centralManager stopScan];
     }
-    self.isRunning =FALSE;
+    self.isSearhing = NO;
+}
+
+
+
+-(void) stopAll{
+    NSLog(@"CLIENT: stop all");
+    [self stopSearch];
+    
+    for(CBPeripheral *peripheal in self.peripherals){
+        [ self closePeripheral:peripheal];
+    }
+    
+    self.centralManager = nil;
+    self.isRunning =NO;
 }
 
 -(void) closePeripheral:(CBPeripheral*)peripheral{
@@ -58,6 +73,7 @@
      NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:FALSE], CBCentralManagerScanOptionAllowDuplicatesKey, nil];
      */
     [self.centralManager scanForPeripheralsWithServices:self.serviceUUIDs options:nil];
+    self.isSearhing = YES;
 }
 
 -(void) searchPeripheralAllowDuplicate{
@@ -66,6 +82,7 @@
      NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:FALSE], CBCentralManagerScanOptionAllowDuplicatesKey, nil];
     
     [self.centralManager scanForPeripheralsWithServices:self.serviceUUIDs options:options];
+    self.isSearhing = YES;
 }
 
 -(NSArray *) retrieveConnectedPeripheralWithServices{
@@ -213,37 +230,36 @@ didDisconnectPeripheral:(CBPeripheral *)peripheral
 
 // BLE対応デバイスが検出されると呼び出される
 - (void)checkState{
-    NSString *messtoshow;
     
     switch (self.centralManager.state) {
         case CBCentralManagerStateUnknown:
         {
-            messtoshow=[NSString stringWithFormat:@"CENTRAL: State unknown, update imminent."];
+            NSLog(@"CENTRAL: State unknown, update imminent.");
             break;
         }
         case CBCentralManagerStateResetting:
         {
-            messtoshow=[NSString stringWithFormat:@"CENTRAL: The connection with the system service was momentarily lost, update imminent."];
+            NSLog(@"CENTRAL: The connection with the system service was momentarily lost, update imminent.");
             break;
         }
         case CBCentralManagerStateUnsupported:
         {
-            messtoshow=[NSString stringWithFormat:@"CENTRAL: The platform doesn't support Bluetooth Low Energy"];
+            NSLog(@"CENTRAL: The platform doesn't support Bluetooth Low Energy");
             break;
         }
         case CBCentralManagerStateUnauthorized:
         {
-            messtoshow=[NSString stringWithFormat:@"CENTRAL: The app is not authorized to use Bluetooth Low Energy"];
+            NSLog(@"CENTRAL: The app is not authorized to use Bluetooth Low Energy");
             break;
         }
         case CBCentralManagerStatePoweredOff:
         {
-            messtoshow=[NSString stringWithFormat:@"CENTRAL: Bluetooth is currently powered off."];
+            NSLog(@"CENTRAL: Bluetooth is currently powered off.");
             break;
         }
         case CBCentralManagerStatePoweredOn:
         {
-            messtoshow=[NSString stringWithFormat:@"CENTRAL: Bluetooth is currently powered on and available to use."];
+            NSLog(@"CENTRAL: Bluetooth is currently powered on and available to use.");
             self.isReady = TRUE;
             if(self.didReadyCentral){
                 self.didReadyCentral();

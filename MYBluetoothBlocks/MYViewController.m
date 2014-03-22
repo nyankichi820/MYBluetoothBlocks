@@ -27,10 +27,11 @@ static NSString * kCBUUIDTestService   = @"F1453167-EC82-4DE9-BD9C-1406F3B8A7B4"
 {
     [super viewDidLoad];
     
-    
+    __weak typeof(self) weakSelf = self;
      // Creates the service UUID
     
     
+     // initialize peripheral
      
      CBMutableCharacteristic * notifyCharacteristic = [[CBMutableCharacteristic alloc] initWithType:[CBUUID UUIDWithString:kCBUUIDTestNotify] properties:CBCharacteristicPropertyNotify value:nil permissions:CBAttributePermissionsReadable];
     
@@ -53,8 +54,14 @@ static NSString * kCBUUIDTestService   = @"F1453167-EC82-4DE9-BD9C-1406F3B8A7B4"
     
     MYBluetoothBlocksServer *server = [MYBluetoothBlocksServer shared];
     
+    
+    __weak typeof(server) weakServer = server;
+    
     [server setupServer:@"my bt" services:services];
     
+    server.didReadyServer = ^(){
+        weakSelf.peripheralStatus.text = @"ready";
+    };
     
     // receive data
     server.didReceiveData = ^(CBATTRequest *request,NSData *data){
@@ -66,100 +73,104 @@ static NSString * kCBUUIDTestService   = @"F1453167-EC82-4DE9-BD9C-1406F3B8A7B4"
     
    
     // notification send
-    server.didSubscribeToCharacteristic = ^(CBCentral *central,CBCharacteristic *characteristic){
+    server.didSubscribe = ^(MYBluetoothBlocksSubscriber *subscriber){
         NSLog(@"subscribe");
+        weakSelf.centralPeripheralsCount.text = [NSString stringWithFormat:@"Subscribers : %d",weakServer.subscribers.count] ;
         
-        NSLog(@"send notify");
-        NSData *writeData = [@"notify" dataUsingEncoding:NSUTF8StringEncoding];
-        [server sendValue:writeData characteristic:characteristic onSubscribedCentrals:@[central]];
-        
-       
     };
     
     
-    //[server  startPeripheral];
     
-     //  set background restore identifier if require multi peripheral
-    [server  startPeripheralWithIdentifier:@"myPeripheral"];
     
+    // initialize central
     
     
     MYBluetoothBlocksClient *client = [MYBluetoothBlocksClient shared];
     [client setupRootClient:@[[CBUUID UUIDWithString:kCBUUIDTestService]]];
     
     
-    client.didReady = ^() {
-        self.status.text = @"ready";
+    client.didReadyCentral = ^() {
+        weakSelf.centralStatus.text = @"ready";
     };
     
-    client.didConnect = ^(CBPeripheral *peripheral) {
-        self.status.text = [NSString stringWithFormat:@"connect %@",peripheral.name] ;
-    
-    };
-    
-    
+    __weak typeof(client) weakClient = client;
     client.didDiscoverServer = ^(MYBluetoothBlocksClient *childClient) {
-        self.status.text = [NSString stringWithFormat:@"find server "] ;
         
         
+        weakSelf.centralStatus.text = [NSString stringWithFormat:@"found server "] ;
+        weakSelf.centralPeripheralsCount.text = [NSString stringWithFormat:@"Peripherals : %d",weakClient.childClients.count] ;
         
+       
         
-        
-        childClient.didUpdateValueForCharacteristic = ^(CBCharacteristic *characteristic,NSError *error){
-            NSString *readString = [[NSString alloc] initWithData:characteristic.value encoding:NSUTF8StringEncoding];
-            
-            NSLog(@"read data %@",readString);
-
-            
-        };
-        
-        childClient.didWriteValueForCharacteristic = ^(CBCharacteristic *characteristic,NSError *error){
-        NSString *readString = [[NSString alloc] initWithData:characteristic.value encoding:NSUTF8StringEncoding];
-            
-            
-           NSLog(@"write data %@",readString);
-            
-        };
-        
-        childClient.didUpdateRSSI = ^(NSError *error){
-            NSLog(@"RSSI %f",childClient.peripheral.RSSI.floatValue);
-            
-        };
-        
-        for(CBCharacteristic *characteristic in childClient.service.characteristics){
-            if([characteristic.UUID isEqual:notifyCharacteristic.UUID]){
-                
-                NSLog(@"notify charastaristic");
-                [childClient setNotifyValue:YES characteristic:characteristic];
-            }
-            
-            if([characteristic.UUID isEqual:readCharacteristic.UUID]){
-                 NSLog(@"read charastaristic");
-                [childClient readValue:characteristic];
-            }
-            
-            if([characteristic.UUID isEqual:writeCharacteristic.UUID]){
-                 NSLog(@"write charastaristic");
-                NSData *writeData = [@"send data" dataUsingEncoding:NSUTF8StringEncoding];
-                [childClient writeValue:writeData characteristic:characteristic];
-            }
-            
-        }
-        
-        
-        [childClient readRSSI];
         
     };
     
-    //[client startCentral];
+   
     
-    //  set background restore identifier if require multi central
-    [client startCentralWithIdentifier:@"myCentral"];
-    
-    
-    
-	// Do any additional setup after loading the view, typically from a nib.
 }
+
+-(IBAction)toggleServer:(id)sender{
+    MYBluetoothBlocksServer *server = [MYBluetoothBlocksServer shared];
+    
+   
+    if(!server.isRunning){
+        //  set background restore identifier if require multi peripheral
+        //[server  startPeripheral];
+        [server  startPeripheralWithIdentifier:@"myPeripheral"];
+        [self.peripheralRunButton setTitle:@"Stop" forState:UIControlStateNormal];
+        
+    }
+    else{
+        
+        [server stopPeripheral];
+         [self.peripheralRunButton setTitle:@"Start" forState:UIControlStateNormal];
+        self.peripheralStatus.text = @"Not ready";
+    }
+}
+
+
+
+-(IBAction)toggleClient:(id)sender{
+    
+    MYBluetoothBlocksClient *client = [MYBluetoothBlocksClient shared];
+    
+    if(!client.isRunning){
+        //[client startCentral];
+        //  set background restore identifier if require multi central
+        [client startCentralWithIdentifier:@"myCentral"];
+        [self.centralRunButton setTitle:@"Stop" forState:UIControlStateNormal];
+        self.searchPeripheralButton.enabled = YES;
+    }
+    else{
+        [client stopAll];
+        [self.searchPeripheralButton setTitle:@"Search" forState:UIControlStateNormal];
+        [self.centralRunButton setTitle:@"Start" forState:UIControlStateNormal];
+        self.centralStatus.text = @"Not ready";
+        self.searchPeripheralButton.enabled = NO;
+    }
+}
+
+-(IBAction)searchPeripheral:(id)sender{
+    
+    MYBluetoothBlocksClient *client = [MYBluetoothBlocksClient shared];
+    
+    if(!client.isRunning){
+        return;
+    }
+    if(!client.isSearhing){
+        [client searchPeripheral];
+        [self.searchPeripheralButton setTitle:@"Stop" forState:UIControlStateNormal];
+        self.centralStatus.text = @"Search peripheral";
+        
+    }
+    else{
+        [client stopSearch];
+        [self.searchPeripheralButton setTitle:@"Search" forState:UIControlStateNormal];
+        self.centralStatus.text = @"Stop Search";
+        
+    }
+}
+
 
 - (void)didReceiveMemoryWarning
 {

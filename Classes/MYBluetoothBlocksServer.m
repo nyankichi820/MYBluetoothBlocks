@@ -33,9 +33,6 @@ static MYBluetoothBlocksServer *instance = 0;
 
     self.didReadyPeripheral = ^(){
          NSLog(@"SERVER: ready peripheral");
-        if(weakSelf.didReady){
-            weakSelf.didReady();
-        }
         [ weakSelf addServices];
     };
  
@@ -44,6 +41,43 @@ static MYBluetoothBlocksServer *instance = 0;
         [ weakSelf advertiseServices];
     };
     
+    self.didStartAdvertising = ^(NSError * error){
+        if(!error && weakSelf.didReadyServer){
+            weakSelf.didReadyServer();
+        }
+        else{
+            NSLog(@"SERVER ERROR :%@",error.description);
+        }
+    };
+    
+    self.subscribers = [NSMutableArray array];
+    
+    
+    // notification send
+    self.didSubscribeToCharacteristic = ^(CBCentral *central,CBCharacteristic *characteristic){
+        NSLog(@"subscribe");
+        MYBluetoothBlocksSubscriber *subscriber = [[MYBluetoothBlocksSubscriber alloc] init];
+        subscriber.central = central;
+        subscriber.characteristic = characteristic;
+        [weakSelf.subscribers addObject:subscriber];
+        if(weakSelf.didSubscribe){
+            weakSelf.didSubscribe(subscriber);
+        }
+    };
+    
+    self.didUnsubscribeFromCharacteristic = ^(CBCentral *central,CBCharacteristic *characteristic){
+        NSLog(@"unsubscribe");
+        
+        for(MYBluetoothBlocksSubscriber *subscriber in weakSelf.subscribers){
+            if([subscriber.central isEqual:central] && [subscriber.characteristic isEqual:characteristic]){
+                [weakSelf.subscribers removeObject:subscriber];
+                if(weakSelf.didUnSubscribe){
+                    weakSelf.didUnSubscribe(subscriber);
+                }
+            }
+        }
+        
+    };
     
     self.didReceiveWriteRequests = ^(NSArray *requests){
         NSLog(@"SERVER: didReceiveWriteRequests");

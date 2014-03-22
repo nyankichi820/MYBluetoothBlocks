@@ -38,6 +38,7 @@ typedef void (^BTBlocksPeripheralDidReceiveReadRequestBlocks)(CBATTRequest *requ
 @property (nonatomic,strong)  CBCentralManager *centralManager;
 @property (nonatomic,strong)  NSString *localName;
 @property (nonatomic,strong)  CBPeripheralManager *peripheralManager;
+
 @property (nonatomic,strong)  NSArray *services;
 @property (nonatomic) BOOL isRunning;
 @property (nonatomic) BOOL isReady;

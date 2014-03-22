@@ -61,7 +61,7 @@ typedef void (^BTBlocksCentralDidUpdateNameBlocks)();
 @property (nonatomic,strong) NSMutableArray *characteristics;
 @property (nonatomic) BOOL isRunning;
 @property (nonatomic) BOOL isReady;
-
+@property (nonatomic) BOOL isSearhing;
 
 
 -(void) startCentral;
@@ -69,6 +69,7 @@ typedef void (^BTBlocksCentralDidUpdateNameBlocks)();
 -(void) searchPeripheral;
 -(void) searchPeripheralAllowDuplicate;
 -(void) stopSearch;
+-(void) stopAll;
 -(void) closePeripheral:(CBPeripheral*)peripheral;
 -(NSArray *) retrieveConnectedPeripheralWithServices;
 -(NSArray *) retrievePeripheralWithIdentifirers:(NSArray*)identifiers;

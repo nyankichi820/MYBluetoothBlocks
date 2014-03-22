@@ -9,14 +9,20 @@
 #import <Foundation/Foundation.h>
 #import <CoreBluetooth/CoreBluetooth.h>
 #import "MYBluetoothBlocks.h"
+#import "MYBluetoothBlocksSubscriber.h"
+
 @interface MYBluetoothBlocksServer : MYBluetoothBlocksPeripheral
+
 typedef void (^MYBluetoothBlocksServerDidReadyBlock)();
 typedef void (^MYBluetoothBlocksServerDidReceiveDataBlocks)(CBATTRequest *request,NSData *data);
+typedef void (^MYBluetoothBlocksServerDidSubscribe)(MYBluetoothBlocksSubscriber *subscriber);
+typedef void (^MYBluetoothBlocksServerDidUnSubscribe)(MYBluetoothBlocksSubscriber *subscriber);
 
-@property (nonatomic,retain) NSString *shortMessage;
-
-@property(readwrite, copy) MYBluetoothBlocksServerDidReadyBlock didReady;
+@property(readwrite, copy) MYBluetoothBlocksServerDidReadyBlock didReadyServer;
 @property(readwrite, copy) MYBluetoothBlocksServerDidReceiveDataBlocks didReceiveData;
+@property(readwrite, copy) MYBluetoothBlocksServerDidSubscribe didSubscribe;
+@property(readwrite, copy) MYBluetoothBlocksServerDidUnSubscribe didUnSubscribe;
+@property (nonatomic,strong) NSMutableArray *subscribers;
 
 
 + (MYBluetoothBlocksServer *) shared;

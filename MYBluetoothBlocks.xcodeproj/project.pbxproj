@@ -25,6 +25,11 @@
 		7F3A3BC718DBE51C009B342D /* MYBluetoothBlocksServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3A3BC018DBE51C009B342D /* MYBluetoothBlocksServer.m */; };
 		7F3A3BC818DBE51C009B342D /* MYBluetoothBlocksCentral.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3A3BC218DBE51C009B342D /* MYBluetoothBlocksCentral.m */; };
 		7F3A3BC918DBE51C009B342D /* MYBluetoothBlocksPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3A3BC418DBE51C009B342D /* MYBluetoothBlocksPeripheral.m */; };
+		7FD2D4E918DD2E3100EE682D /* MYBluetoothBlocksSubscriber.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2D4E818DD2E3100EE682D /* MYBluetoothBlocksSubscriber.m */; };
+		7FD2D4EC18DD3CF300EE682D /* MYChildClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2D4EB18DD3CF300EE682D /* MYChildClientViewController.m */; };
+		7FD2D4EF18DD3DA800EE682D /* MYSubscriberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2D4EE18DD3DA800EE682D /* MYSubscriberViewController.m */; };
+		7FD2D4F218DD401B00EE682D /* MYSubscribersTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2D4F118DD401B00EE682D /* MYSubscribersTableViewController.m */; };
+		7FD2D4F518DD402E00EE682D /* MYChildClientTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2D4F418DD402E00EE682D /* MYChildClientTableViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -66,6 +71,16 @@
 		7F3A3BC218DBE51C009B342D /* MYBluetoothBlocksCentral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYBluetoothBlocksCentral.m; sourceTree = "<group>"; };
 		7F3A3BC318DBE51C009B342D /* MYBluetoothBlocksPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYBluetoothBlocksPeripheral.h; sourceTree = "<group>"; };
 		7F3A3BC418DBE51C009B342D /* MYBluetoothBlocksPeripheral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYBluetoothBlocksPeripheral.m; sourceTree = "<group>"; };
+		7FD2D4E718DD2E3100EE682D /* MYBluetoothBlocksSubscriber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYBluetoothBlocksSubscriber.h; sourceTree = "<group>"; };
+		7FD2D4E818DD2E3100EE682D /* MYBluetoothBlocksSubscriber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYBluetoothBlocksSubscriber.m; sourceTree = "<group>"; };
+		7FD2D4EA18DD3CF300EE682D /* MYChildClientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYChildClientViewController.h; sourceTree = "<group>"; };
+		7FD2D4EB18DD3CF300EE682D /* MYChildClientViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYChildClientViewController.m; sourceTree = "<group>"; };
+		7FD2D4ED18DD3DA800EE682D /* MYSubscriberViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYSubscriberViewController.h; sourceTree = "<group>"; };
+		7FD2D4EE18DD3DA800EE682D /* MYSubscriberViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYSubscriberViewController.m; sourceTree = "<group>"; };
+		7FD2D4F018DD401B00EE682D /* MYSubscribersTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYSubscribersTableViewController.h; sourceTree = "<group>"; };
+		7FD2D4F118DD401B00EE682D /* MYSubscribersTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYSubscribersTableViewController.m; sourceTree = "<group>"; };
+		7FD2D4F318DD402E00EE682D /* MYChildClientTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYChildClientTableViewController.h; sourceTree = "<group>"; };
+		7FD2D4F418DD402E00EE682D /* MYChildClientTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYChildClientTableViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,6 +146,14 @@
 				7F3A3B9618DBE4FC009B342D /* Main.storyboard */,
 				7F3A3B9918DBE4FC009B342D /* MYViewController.h */,
 				7F3A3B9A18DBE4FC009B342D /* MYViewController.m */,
+				7FD2D4EA18DD3CF300EE682D /* MYChildClientViewController.h */,
+				7FD2D4EB18DD3CF300EE682D /* MYChildClientViewController.m */,
+				7FD2D4ED18DD3DA800EE682D /* MYSubscriberViewController.h */,
+				7FD2D4EE18DD3DA800EE682D /* MYSubscriberViewController.m */,
+				7FD2D4F018DD401B00EE682D /* MYSubscribersTableViewController.h */,
+				7FD2D4F118DD401B00EE682D /* MYSubscribersTableViewController.m */,
+				7FD2D4F318DD402E00EE682D /* MYChildClientTableViewController.h */,
+				7FD2D4F418DD402E00EE682D /* MYChildClientTableViewController.m */,
 				7F3A3B9C18DBE4FC009B342D /* Images.xcassets */,
 				7F3A3B8B18DBE4FC009B342D /* Supporting Files */,
 			);
@@ -174,6 +197,8 @@
 				7F3A3BBE18DBE51C009B342D /* MYBluetoothBlocksClient.m */,
 				7F3A3BBF18DBE51C009B342D /* MYBluetoothBlocksServer.h */,
 				7F3A3BC018DBE51C009B342D /* MYBluetoothBlocksServer.m */,
+				7FD2D4E718DD2E3100EE682D /* MYBluetoothBlocksSubscriber.h */,
+				7FD2D4E818DD2E3100EE682D /* MYBluetoothBlocksSubscriber.m */,
 				7F3A3BC118DBE51C009B342D /* MYBluetoothBlocksCentral.h */,
 				7F3A3BC218DBE51C009B342D /* MYBluetoothBlocksCentral.m */,
 				7F3A3BC318DBE51C009B342D /* MYBluetoothBlocksPeripheral.h */,
@@ -287,12 +312,17 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FD2D4EC18DD3CF300EE682D /* MYChildClientViewController.m in Sources */,
+				7FD2D4F218DD401B00EE682D /* MYSubscribersTableViewController.m in Sources */,
 				7F3A3BC818DBE51C009B342D /* MYBluetoothBlocksCentral.m in Sources */,
 				7F3A3B9B18DBE4FC009B342D /* MYViewController.m in Sources */,
 				7F3A3B9518DBE4FC009B342D /* MYAppDelegate.m in Sources */,
+				7FD2D4F518DD402E00EE682D /* MYChildClientTableViewController.m in Sources */,
 				7F3A3BC618DBE51C009B342D /* MYBluetoothBlocksClient.m in Sources */,
 				7F3A3BC718DBE51C009B342D /* MYBluetoothBlocksServer.m in Sources */,
 				7F3A3B9118DBE4FC009B342D /* main.m in Sources */,
+				7FD2D4E918DD2E3100EE682D /* MYBluetoothBlocksSubscriber.m in Sources */,
+				7FD2D4EF18DD3DA800EE682D /* MYSubscriberViewController.m in Sources */,
 				7F3A3BC918DBE51C009B342D /* MYBluetoothBlocksPeripheral.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

@@ -14,18 +14,9 @@
 
 
 @interface MYBluetoothBlocksClient : MYBluetoothBlocksCentral
-typedef void (^MYBluetoothBlocksClientDidReadyBlock)();
-typedef void (^MYBluetoothBlocksClientDidConnectBlocks)(CBPeripheral *peripheral);
-typedef void (^MYBluetoothBlocksClientDidDisconnectBlocks)(CBPeripheral *peripheral,NSError *error);
-typedef void (^MYBluetoothBlocksDidFailToConnectBlocks)(CBPeripheral *peripheral,NSError *error);
 typedef void (^MYBluetoothBlocksDidDiscoverServerBlocks)(MYBluetoothBlocksClient *childClient);
 
 + (MYBluetoothBlocksClient *) shared;
-
-@property(readwrite, copy) MYBluetoothBlocksClientDidReadyBlock didReady;
-@property(readwrite, copy) MYBluetoothBlocksClientDidConnectBlocks didConnect;
-@property(readwrite, copy) MYBluetoothBlocksClientDidDisconnectBlocks didDisconnect;
-@property(readwrite, copy) MYBluetoothBlocksDidFailToConnectBlocks didFailToConnect;
 
 @property(readwrite, copy) MYBluetoothBlocksDidDiscoverServerBlocks didDiscoverServer;
 
@@ -37,6 +28,5 @@ typedef void (^MYBluetoothBlocksDidDiscoverServerBlocks)(MYBluetoothBlocksClient
 -(void)setupChildClient:(CBPeripheral *)peripheral service:(CBService*)service;
 
 
--(void) stopAll;
 
 @end

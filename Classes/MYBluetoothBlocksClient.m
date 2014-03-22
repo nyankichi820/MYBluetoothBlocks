@@ -25,14 +25,7 @@ static MYBluetoothBlocksClient *instance = 0;
     
     __weak typeof(self) weakSelf = self;
     
-    self.didReadyCentral = ^(){
-        NSLog(@"CLIENT: ready");
-        if(weakSelf.didReady){
-            weakSelf.didReady();
-        }
-        [ weakSelf searchPeripheral];
-
-    };
+   
     
     self.didDiscoverPeripheral = ^(CBPeripheral *peripheral,NSDictionary *advertisementData,NSNumber *RSSI){
         NSLog(@"CLIENT: discover peripheral");
@@ -55,9 +48,6 @@ static MYBluetoothBlocksClient *instance = 0;
     
     self.didConnectPeripheral = ^(CBPeripheral *peripheral){
         NSLog(@"CLIENT: connect pheripheral");
-        if(weakSelf.didConnect){
-            weakSelf.didConnect(peripheral);
-        }
         [weakSelf.peripherals addObject:peripheral];
         [weakSelf discoverServices:peripheral services:weakSelf.serviceUUIDs];
         
@@ -65,9 +55,6 @@ static MYBluetoothBlocksClient *instance = 0;
     
     self.didDisconnectPeripheral = ^(CBPeripheral *peripheral,NSError *error){
         NSLog(@"CLIENT: disconnect pheripheral");
-        if(weakSelf.didDisconnect){
-            weakSelf.didDisconnect(peripheral,error);
-        }
         [weakSelf.peripherals removeObject:peripheral];
         [weakSelf connectPeripheral:peripheral];
     };
@@ -98,6 +85,7 @@ static MYBluetoothBlocksClient *instance = 0;
        
         if(!error){
              NSLog(@"CLIENT: start Child");
+            [weakSelf.childClients addObject:child];
             [child setupChildClient:peripheral service:service];
             if(weakSelf.didDiscoverServer){
                 weakSelf.didDiscoverServer(child);
@@ -116,9 +104,6 @@ static MYBluetoothBlocksClient *instance = 0;
     self.peripheral = peripheral;
     self.peripheral.delegate = self;
     self.service    = service;
-    
-    
-    
 }
 
 -(NSString*)UUIDString:(CBUUID *)uuid{
@@ -132,12 +117,6 @@ static MYBluetoothBlocksClient *instance = 0;
 }
 
 
--(void) stopAll{
-    NSLog(@"CLIENT: stop all");
-    for(CBPeripheral *peripheal in self.peripherals){
-        [ self closePeripheral:peripheal];
-    }
-    [self stopSearch];
-}
+
 
 @end
