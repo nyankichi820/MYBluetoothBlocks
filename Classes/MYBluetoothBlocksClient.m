@@ -114,6 +114,7 @@ static MYBluetoothBlocksClient *instance = 0;
 
 -(void)setupChildClient:(CBPeripheral *)peripheral service:(CBService*)service{
     self.peripheral = peripheral;
+    self.peripheral.delegate = self;
     self.service    = service;
     
     

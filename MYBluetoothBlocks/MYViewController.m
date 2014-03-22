@@ -7,8 +7,7 @@
 //
 
 #import "MYViewController.h"
-#import "MYBluetoothBlocksClient.h"
-#import "MYBluetoothBlocksServer.h"
+#import "MYBluetoothBlocks.h"
 #import <CoreBluetooth/CoreBluetooth.h>
 
 
@@ -78,10 +77,10 @@ static NSString * kCBUUIDTestService   = @"F1453167-EC82-4DE9-BD9C-1406F3B8A7B4"
     };
     
     
-    [server  startPeripheral];
+    //[server  startPeripheral];
     
      //  set background restore identifier if require multi peripheral
-    //[server  startPeripheralWithIdentifier:@"myPeripheral"];
+    [server  startPeripheralWithIdentifier:@"myPeripheral"];
     
     
     
@@ -105,6 +104,7 @@ static NSString * kCBUUIDTestService   = @"F1453167-EC82-4DE9-BD9C-1406F3B8A7B4"
         
         
         
+        
         childClient.didUpdateValueForCharacteristic = ^(CBCharacteristic *characteristic,NSError *error){
             NSString *readString = [[NSString alloc] initWithData:characteristic.value encoding:NSUTF8StringEncoding];
             
@@ -114,8 +114,10 @@ static NSString * kCBUUIDTestService   = @"F1453167-EC82-4DE9-BD9C-1406F3B8A7B4"
         };
         
         childClient.didWriteValueForCharacteristic = ^(CBCharacteristic *characteristic,NSError *error){
+        NSString *readString = [[NSString alloc] initWithData:characteristic.value encoding:NSUTF8StringEncoding];
             
-          
+            
+           NSLog(@"write data %@",readString);
             
         };
         
@@ -149,10 +151,10 @@ static NSString * kCBUUIDTestService   = @"F1453167-EC82-4DE9-BD9C-1406F3B8A7B4"
         
     };
     
-    [client startCentral];
+    //[client startCentral];
     
     //  set background restore identifier if require multi central
-    //[client startCentralWithIdentifier:@"myCentral"];
+    [client startCentralWithIdentifier:@"myCentral"];
     
     
     

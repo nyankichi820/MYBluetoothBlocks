@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "MYBluetoothBlocksCentral.h"
 #import "MYBluetoothBlocksPeripheral.h"
+#import "MYBluetoothBlocksClient.h"
+#import "MYBluetoothBlocksServer.h"
 
 
 
