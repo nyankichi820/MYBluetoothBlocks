@@ -40,7 +40,8 @@
     
     CBMutableCharacteristic * readCharacteristic = [[CBMutableCharacteristic alloc] initWithType:[CBUUID UUIDWithString:kCBUUIDTestRead] properties:CBCharacteristicPropertyRead value:nil permissions:CBAttributePermissionsReadable];
     
-    [readCharacteristic setValue:[@"hello" dataUsingEncoding:NSUTF8StringEncoding]];
+   
+    [readCharacteristic setValue:[@"hello!" dataUsingEncoding:NSUTF8StringEncoding]];
     
     // Creates the service and adds the characteristic to it
     CBMutableService *service = [[CBMutableService alloc] initWithType:[CBUUID UUIDWithString:kCBUUIDTestService ] primary:YES];
@@ -62,6 +63,9 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+    self.navigationController.navigationBar.barTintColor = RGB(194,68,69);
+    self.navigationController.navigationBar.tintColor = [UIColor whiteColor];
+
     [self registerBlocks];
 }
 
@@ -92,6 +96,7 @@
         
         NSLog(@"receive data %@",readString);
         
+        self.peripheralWriteData.text = [NSString stringWithFormat:@"Write Data %@",readString];
     };
     
     
@@ -131,13 +136,20 @@
         //[server  startPeripheral];
         [server  startPeripheralWithIdentifier:@"myPeripheral"];
         [self.peripheralRunButton setTitle:@"Stop" forState:UIControlStateNormal];
-        
+        self.peripheralReadDataLabel.enabled = YES;
+        self.peripheralSubscribersCount.enabled = YES;
+        self.peripheralWriteData.enabled = YES;
+        self.checkSubscriberButton.enabled = YES;
     }
     else{
         
         [server stopPeripheral];
         [self.peripheralRunButton setTitle:@"Start" forState:UIControlStateNormal];
         self.peripheralStatus.text = @"Not ready";
+        self.peripheralReadDataLabel.enabled = NO;
+        self.peripheralSubscribersCount.enabled = NO;
+        self.peripheralWriteData.enabled = NO;
+        self.checkSubscriberButton.enabled = NO;
     }
 }
 

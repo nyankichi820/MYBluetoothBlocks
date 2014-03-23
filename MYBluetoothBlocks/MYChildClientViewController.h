@@ -21,5 +21,8 @@
 
 @property(nonatomic,strong) IBOutlet UILabel *centralReadDataLabel;
 @property(nonatomic,strong) IBOutlet UIButton *centralReadDataButton;
-
+@property(nonatomic,strong) IBOutlet UIButton *updateRSSIButton;
+@property(nonatomic,strong) IBOutlet UIImageView *peripheralImage;
+@property(nonatomic,strong) IBOutlet UIImageView *centralImage;
+@property(nonatomic,strong) dispatch_source_t timer;
 @end

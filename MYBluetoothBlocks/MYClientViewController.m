@@ -46,6 +46,9 @@
 
 -(void)viewDidAppear:(BOOL)animated{
     [super viewDidAppear:animated];
+    self.navigationController.navigationBar.barTintColor = RGB(255,204,0);
+    self.navigationController.navigationBar.tintColor = [UIColor blackColor];
+
     [self registerBlocks];
 }
 
@@ -97,6 +100,9 @@
         [client startCentralWithIdentifier:@"myCentral"];
         [self.centralRunButton setTitle:@"Stop" forState:UIControlStateNormal];
         self.searchPeripheralButton.enabled = YES;
+        self.centralPeripheralsCount.enabled = YES;
+        self.checkPeripheralButton.enabled = YES;
+        
     }
     else{
         [client stopAll];
@@ -104,8 +110,13 @@
         [self.centralRunButton setTitle:@"Start" forState:UIControlStateNormal];
         self.centralStatus.text = @"Not ready";
         self.searchPeripheralButton.enabled = NO;
+        self.centralPeripheralsCount.enabled = NO;
+        self.checkPeripheralButton.enabled = NO;
+        
     }
 }
+
+
 
 -(IBAction)searchPeripheral:(id)sender{
     

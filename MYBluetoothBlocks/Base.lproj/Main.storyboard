@@ -4,7 +4,7 @@
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="3733"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--View Controller - Choose Type-->
         <scene sceneID="ufC-wZ-h7g">
             <objects>
                 <viewController id="vXZ-lx-hvc" customClass="MYViewController" sceneMemberID="viewController">
@@ -13,9 +13,12 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Jlw-mn-hgn">
-                                <rect key="frame" x="110" y="138" width="100" height="100"/>
+                                <rect key="frame" x="0.0" y="65" width="320" height="261"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal" title="Peripherl">
+                                <color key="backgroundColor" red="0.76078431369999999" green="0.2666666667" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Peripheral">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -23,9 +26,12 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="N6n-kN-0BR">
-                                <rect key="frame" x="110" y="351" width="100" height="100"/>
+                                <rect key="frame" x="0.0" y="326" width="320" height="261"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
                                 <state key="normal" title="Central">
+                                    <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                                 <connections>
@@ -35,7 +41,7 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="rlk-gg-DLl"/>
+                    <navigationItem key="navigationItem" title="Choose Type" id="rlk-gg-DLl"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
@@ -56,7 +62,7 @@
             </objects>
             <point key="canvasLocation" x="-889" y="-218"/>
         </scene>
-        <!--Child Client Table View Controller-->
+        <!--Child Client Table View Controller - Peripheral List-->
         <scene sceneID="faO-Kb-JoN">
             <objects>
                 <tableViewController id="BxH-LS-4hJ" customClass="MYChildClientTableViewController" sceneMemberID="viewController">
@@ -82,13 +88,13 @@
                             <outlet property="delegate" destination="BxH-LS-4hJ" id="xAe-Za-r4U"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="JQM-iy-BuR"/>
+                    <navigationItem key="navigationItem" title="Peripheral List" id="JQM-iy-BuR"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BI2-Gh-VGF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="340" y="410"/>
         </scene>
-        <!--Child Client View Controller-->
+        <!--Child Client View Controller - Peripheral-->
         <scene sceneID="QFg-Hn-NwV">
             <objects>
                 <viewController id="wdZ-Fs-ozp" customClass="MYChildClientViewController" sceneMemberID="viewController">
@@ -97,8 +103,9 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="hol-2u-7Fe">
-                                <rect key="frame" x="192" y="101" width="116" height="30"/>
+                                <rect key="frame" x="10" y="140" width="300" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Subscribe">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -106,21 +113,22 @@
                                     <action selector="subscribe:" destination="wdZ-Fs-ozp" eventType="touchUpInside" id="YKT-x9-lQM"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notify Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pwL-28-oca">
-                                <rect key="frame" x="14" y="105" width="209" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notify Data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="pwL-28-oca">
+                                <rect key="frame" x="10" y="90" width="300" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Read Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fe7-ym-O0G">
-                                <rect key="frame" x="16" y="155" width="209" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Read Data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="Fe7-ym-O0G">
+                                <rect key="frame" x="10" y="190" width="300" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="suZ-eo-Wml">
-                                <rect key="frame" x="233" y="151" width="71" height="30"/>
+                                <rect key="frame" x="10" y="230" width="300" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Read">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -129,8 +137,9 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Duf-lx-Po9">
-                                <rect key="frame" x="250" y="199" width="36" height="30"/>
+                                <rect key="frame" x="10" y="340" width="300" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Write">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -139,22 +148,45 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="Gzj-LS-VGN">
-                                <rect key="frame" x="13" y="200" width="210" height="30"/>
+                                <rect key="frame" x="10" y="290" width="300" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="wdZ-Fs-ozp" id="swy-me-fEq"/>
+                                </connections>
                             </textField>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RSSI : 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QuV-pF-w70">
-                                <rect key="frame" x="199" y="65" width="109" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="RSSI : 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="QuV-pF-w70">
+                                <rect key="frame" x="10" y="390" width="300" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="JUB-lh-RwK">
+                                <rect key="frame" x="10" y="440" width="300" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Update RSSI">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleUpdateRSSI:" destination="wdZ-Fs-ozp" eventType="touchUpInside" id="r9h-05-wLU"/>
+                                </connections>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="peripheral.jpg" id="N9u-At-weN">
+                                <rect key="frame" x="10" y="500" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="g1.png" id="EOo-q5-g6C">
+                                <rect key="frame" x="270" y="500" width="40" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="QhA-p8-OQF"/>
+                    <navigationItem key="navigationItem" title="Peripheral" id="QhA-p8-OQF"/>
                     <connections>
+                        <outlet property="centralImage" destination="EOo-q5-g6C" id="n35-Oj-5XW"/>
                         <outlet property="centralNotifyLabel" destination="pwL-28-oca" id="qeC-RL-0zg"/>
                         <outlet property="centralRSSILabel" destination="QuV-pF-w70" id="08M-fQ-nBG"/>
                         <outlet property="centralReadDataButton" destination="suZ-eo-Wml" id="08N-sQ-NJm"/>
@@ -162,13 +194,15 @@
                         <outlet property="centralSubscribeButton" destination="hol-2u-7Fe" id="Q1O-C8-XOs"/>
                         <outlet property="centralWriteDataButton" destination="Duf-lx-Po9" id="QFR-ue-2R1"/>
                         <outlet property="centralWriteDataTextField" destination="Gzj-LS-VGN" id="HbK-GK-AJ5"/>
+                        <outlet property="peripheralImage" destination="N9u-At-weN" id="UqR-Tf-e8Q"/>
+                        <outlet property="updateRSSIButton" destination="JUB-lh-RwK" id="dfI-Wj-vom"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="hYZ-m2-rKs" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="906" y="410"/>
         </scene>
-        <!--Subscribers Table View Controller-->
+        <!--Subscribers Table View Controller - Subscriber List-->
         <scene sceneID="qqa-L3-F6N">
             <objects>
                 <tableViewController id="BXl-P9-f0v" customClass="MYSubscribersTableViewController" sceneMemberID="viewController">
@@ -194,13 +228,13 @@
                             <outlet property="delegate" destination="BXl-P9-f0v" id="lBR-bz-ykR"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="Jct-vg-Yrz"/>
+                    <navigationItem key="navigationItem" title="Subscriber List" id="Jct-vg-Yrz"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yfc-9s-52d" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="340" y="-390"/>
         </scene>
-        <!--Subscriber View Controller-->
+        <!--Subscriber View Controller - Subscriber-->
         <scene sceneID="ZeB-DS-zrX">
             <objects>
                 <viewController id="gtP-VF-bas" customClass="MYSubscriberViewController" sceneMemberID="viewController">
@@ -209,7 +243,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="0e8-n9-Lgu">
-                                <rect key="frame" x="253" y="88" width="41" height="30"/>
+                                <rect key="frame" x="10" y="223" width="300" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Notify">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -219,15 +253,24 @@
                                 </connections>
                             </button>
                             <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" minimumFontSize="17" id="nDK-bs-YGR">
-                                <rect key="frame" x="14" y="89" width="218" height="30"/>
+                                <rect key="frame" x="10" y="152" width="300" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="gtP-VF-bas" id="fx2-3A-6nb"/>
+                                </connections>
                             </textField>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notify Data" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="s2Q-iF-uXs">
+                                <rect key="frame" x="10" y="96" width="300" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="QMU-o0-ABe"/>
+                    <navigationItem key="navigationItem" title="Subscriber" id="QMU-o0-ABe"/>
                     <connections>
                         <outlet property="peripheralNotifyButton" destination="0e8-n9-Lgu" id="3AN-IU-kcm"/>
                         <outlet property="peripheralNotifyTextField" destination="nDK-bs-YGR" id="gJG-k4-yxJ"/>
@@ -237,7 +280,7 @@
             </objects>
             <point key="canvasLocation" x="901" y="-396"/>
         </scene>
-        <!--Server View Controller-->
+        <!--Server View Controller - Peripheral-->
         <scene sceneID="0DJ-sz-qmX">
             <objects>
                 <viewController id="Pyc-5Z-Vgr" customClass="MYServerViewController" sceneMemberID="viewController">
@@ -246,15 +289,16 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="not ready" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="o5m-eV-wK0">
-                                <rect key="frame" x="12" y="171" width="296" height="21"/>
+                                <rect key="frame" x="10" y="158" width="300" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="mCB-dh-Zbr">
-                                <rect key="frame" x="106" y="112" width="108" height="30"/>
+                                <rect key="frame" x="10" y="80" width="300" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Start">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -262,22 +306,16 @@
                                     <action selector="toggleServer:" destination="Pyc-5Z-Vgr" eventType="touchUpInside" id="n1D-MV-cYF"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Peripheral" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="LKD-gS-KDN">
-                                <rect key="frame" x="20" y="74" width="145" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscriber : 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="hVZ-Aw-A24">
-                                <rect key="frame" x="25" y="320" width="288" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Subscriber : 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" id="hVZ-Aw-A24">
+                                <rect key="frame" x="10" y="341" width="300" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bbf-SB-moZ">
-                                <rect key="frame" x="25" y="395" width="270" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="bbf-SB-moZ">
+                                <rect key="frame" x="10" y="395" width="300" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="check subscribers">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -285,26 +323,14 @@
                                     <segue destination="BXl-P9-f0v" kind="push" id="6Xu-3v-NrL"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Read Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="CKV-ix-60b">
-                                <rect key="frame" x="20" y="220" width="82" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Read Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" id="CKV-ix-60b">
+                                <rect key="frame" x="10" y="220" width="300" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="tIN-L5-Fhn">
-                                <rect key="frame" x="20" y="273" width="82" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="ks4-K9-lgK">
-                                <rect key="frame" x="115" y="220" width="185" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="w4V-uS-9BU">
-                                <rect key="frame" x="110" y="273" width="188" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Write Data" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" id="tIN-L5-Fhn">
+                                <rect key="frame" x="10" y="273" width="300" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
@@ -312,20 +338,21 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="dsb-RD-VJm"/>
+                    <navigationItem key="navigationItem" title="Peripheral" id="dsb-RD-VJm"/>
                     <connections>
-                        <outlet property="peripheralReadDataLabel" destination="w4V-uS-9BU" id="n8J-DG-Ac5"/>
+                        <outlet property="checkSubscriberButton" destination="bbf-SB-moZ" id="uWx-Vo-m5v"/>
+                        <outlet property="peripheralReadDataLabel" destination="CKV-ix-60b" id="JRa-hw-pzX"/>
                         <outlet property="peripheralRunButton" destination="mCB-dh-Zbr" id="R9g-VE-39X"/>
                         <outlet property="peripheralStatus" destination="o5m-eV-wK0" id="kaO-6m-qyO"/>
                         <outlet property="peripheralSubscribersCount" destination="hVZ-Aw-A24" id="mXf-Wt-Dkp"/>
-                        <outlet property="peripheralWriteData" destination="ks4-K9-lgK" id="tLR-3h-5f3"/>
+                        <outlet property="peripheralWriteData" destination="tIN-L5-Fhn" id="lLe-FM-Iv6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ItJ-Od-UCq" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-59" y="-382"/>
+            <point key="canvasLocation" x="-13" y="-238"/>
         </scene>
-        <!--Client View Controller-->
+        <!--Client View Controller - Central-->
         <scene sceneID="6Cj-is-6dT">
             <objects>
                 <viewController id="rD5-cb-iRZ" customClass="MYClientViewController" sceneMemberID="viewController">
@@ -334,8 +361,9 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="PQp-hf-Yu9">
-                                <rect key="frame" x="104" y="132" width="113" height="30"/>
+                                <rect key="frame" x="10" y="83" width="300" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Start">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -343,23 +371,17 @@
                                     <action selector="toggleClient:" destination="rD5-cb-iRZ" eventType="touchUpInside" id="yQx-Sf-wB4"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Central" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="PAX-MS-H27">
-                                <rect key="frame" x="20" y="91" width="145" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="not ready" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="X9M-uJ-kwK">
-                                <rect key="frame" x="12" y="189" width="288" height="21"/>
+                                <rect key="frame" x="12" y="154" width="288" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="BM5-yN-YfI">
-                                <rect key="frame" x="136" y="238" width="48" height="30"/>
+                                <rect key="frame" x="10" y="217" width="300" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="Search">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -367,15 +389,16 @@
                                     <action selector="searchPeripheral:" destination="rD5-cb-iRZ" eventType="touchUpInside" id="fdf-Sp-PlR"/>
                                 </connections>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="peripherals : 0" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="kvi-XT-vMV">
-                                <rect key="frame" x="20" y="322" width="280" height="21"/>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="peripherals : 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" id="kvi-XT-vMV">
+                                <rect key="frame" x="10" y="338" width="300" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qP0-BF-x7M">
-                                <rect key="frame" x="20" y="429" width="280" height="30"/>
+                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qP0-BF-x7M">
+                                <rect key="frame" x="10" y="429" width="300" height="40"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
                                 <state key="normal" title="check peripherals">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
@@ -386,11 +409,12 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
-                    <navigationItem key="navigationItem" id="ZXf-PJ-HoE"/>
+                    <navigationItem key="navigationItem" title="Central" id="ZXf-PJ-HoE"/>
                     <connections>
                         <outlet property="centralPeripheralsCount" destination="kvi-XT-vMV" id="ksR-m5-qrf"/>
                         <outlet property="centralRunButton" destination="PQp-hf-Yu9" id="7nw-Cr-KVR"/>
                         <outlet property="centralStatus" destination="X9M-uJ-kwK" id="5Lm-Gq-Af0"/>
+                        <outlet property="checkPeripheralButton" destination="qP0-BF-x7M" id="rmD-UQ-tIA"/>
                         <outlet property="searchPeripheralButton" destination="BM5-yN-YfI" id="9jV-E1-Htp"/>
                     </connections>
                 </viewController>
@@ -399,6 +423,10 @@
             <point key="canvasLocation" x="-67" y="410"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="g1.png" width="156" height="160"/>
+        <image name="peripheral.jpg" width="120" height="120"/>
+    </resources>
     <simulatedMetricsContainer key="defaultSimulatedMetrics">
         <simulatedStatusBarMetrics key="statusBar"/>
         <simulatedOrientationMetrics key="orientation"/>

@@ -11,7 +11,7 @@
 @interface MYServerViewController : UIViewController
 @property(nonatomic,strong) IBOutlet UILabel *peripheralStatus;
 @property(nonatomic,strong) IBOutlet UIButton *peripheralRunButton;
-
+@property(nonatomic,strong) IBOutlet UIButton *checkSubscriberButton;
 @property(nonatomic,strong) IBOutlet UILabel *peripheralSubscribersCount;
 
 @property(nonatomic,strong) IBOutlet UILabel *peripheralWriteData;

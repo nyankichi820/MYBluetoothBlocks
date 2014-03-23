@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MYBluetoothBlocks/MYChildClientViewController.m"
-            timestampString = "417188120.085778"
+            timestampString = "417241609.555664"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "96"
-            endingLineNumber = "96"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "-subscribe:"
             landmarkType = "5">
          </BreakpointContent>
@@ -202,11 +202,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MYBluetoothBlocks/MYChildClientViewController.m"
-            timestampString = "417188120.085778"
+            timestampString = "417241609.555664"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
+            startingLineNumber = "115"
+            endingLineNumber = "115"
             landmarkName = "-subscribe:"
             landmarkType = "5">
          </BreakpointContent>
@@ -218,11 +218,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MYBluetoothBlocks/MYChildClientViewController.m"
-            timestampString = "417188120.085778"
+            timestampString = "417241609.555664"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
             landmarkName = "-subscribe:"
             landmarkType = "5">
          </BreakpointContent>
@@ -250,11 +250,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MYBluetoothBlocks/MYChildClientViewController.m"
-            timestampString = "417188120.085778"
+            timestampString = "417241609.555664"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "179"
+            endingLineNumber = "179"
             landmarkName = "-writeData:"
             landmarkType = "5">
          </BreakpointContent>
@@ -266,11 +266,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "MYBluetoothBlocks/MYChildClientViewController.m"
-            timestampString = "417188120.085778"
+            timestampString = "417241609.555664"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "98"
-            endingLineNumber = "98"
+            startingLineNumber = "118"
+            endingLineNumber = "118"
             landmarkName = "-subscribe:"
             landmarkType = "5">
          </BreakpointContent>
@@ -289,6 +289,68 @@
             endingLineNumber = "39"
             landmarkName = "-sendNotify:"
             landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MYBluetoothBlocks/MYServerViewController.m"
+            timestampString = "417240784.815077"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "-registerBlocks"
+            landmarkType = "5">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "MYBluetoothBlocks/MYServerViewController.m"
+            timestampString = "417240784.815077"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
+            landmarkName = "-registerBlocks"
+            landmarkType = "5">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__40-[MYServerViewController registerBlocks]_block_invoke72"
+                  moduleName = "MYBluetoothBlocks"
+                  urlString = "file://localhost/Users/masafumi/Documents/MYBluetoothBlocks/MYBluetoothBlocks/MYServerViewController.m"
+                  timestampString = "417239907.542953"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "188">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "__40-[MYServerViewController registerBlocks]_block_invoke72"
+                  moduleName = "MYBluetoothBlocks"
+                  urlString = "file://localhost/Users/masafumi/Documents/MYBluetoothBlocks/MYBluetoothBlocks/MYServerViewController.m"
+                  timestampString = "417239907.543502"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "98"
+                  endingLineNumber = "98"
+                  offsetFromSymbolStart = "200">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

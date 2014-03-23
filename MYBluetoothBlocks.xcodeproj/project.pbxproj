@@ -32,6 +32,17 @@
 		7FD2D4F518DD402E00EE682D /* MYChildClientTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2D4F418DD402E00EE682D /* MYChildClientTableViewController.m */; };
 		7FD2D4F818DDE43400EE682D /* MYClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2D4F718DDE43400EE682D /* MYClientViewController.m */; };
 		7FD2D4FB18DDE48D00EE682D /* MYServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2D4FA18DDE48D00EE682D /* MYServerViewController.m */; };
+		7FD2D55918DE85A500EE682D /* UIView+UIView_NibStyle.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2D55818DE85A500EE682D /* UIView+UIView_NibStyle.m */; };
+		7FD2D56A18DE955600EE682D /* g9.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FD2D56018DE955600EE682D /* g9.png */; };
+		7FD2D56B18DE955600EE682D /* g8.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FD2D56118DE955600EE682D /* g8.png */; };
+		7FD2D56C18DE955600EE682D /* g7.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FD2D56218DE955600EE682D /* g7.png */; };
+		7FD2D56D18DE955600EE682D /* g6.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FD2D56318DE955600EE682D /* g6.png */; };
+		7FD2D56E18DE955600EE682D /* g5.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FD2D56418DE955600EE682D /* g5.png */; };
+		7FD2D56F18DE955600EE682D /* g4.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FD2D56518DE955600EE682D /* g4.png */; };
+		7FD2D57018DE955600EE682D /* g3.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FD2D56618DE955600EE682D /* g3.png */; };
+		7FD2D57118DE955600EE682D /* g2.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FD2D56718DE955600EE682D /* g2.png */; };
+		7FD2D57318DE955600EE682D /* g1.png in Resources */ = {isa = PBXBuildFile; fileRef = 7FD2D56918DE955600EE682D /* g1.png */; };
+		7FD2D57518DE959300EE682D /* peripheral.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 7FD2D57418DE959300EE682D /* peripheral.jpg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -88,6 +99,18 @@
 		7FD2D4F918DDE48D00EE682D /* MYServerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYServerViewController.h; sourceTree = "<group>"; };
 		7FD2D4FA18DDE48D00EE682D /* MYServerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYServerViewController.m; sourceTree = "<group>"; };
 		7FD2D4FC18DDE4E800EE682D /* MYUUID.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MYUUID.h; sourceTree = "<group>"; };
+		7FD2D55718DE85A500EE682D /* UIView+UIView_NibStyle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+UIView_NibStyle.h"; sourceTree = "<group>"; };
+		7FD2D55818DE85A500EE682D /* UIView+UIView_NibStyle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+UIView_NibStyle.m"; sourceTree = "<group>"; };
+		7FD2D56018DE955600EE682D /* g9.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = g9.png; sourceTree = "<group>"; };
+		7FD2D56118DE955600EE682D /* g8.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = g8.png; sourceTree = "<group>"; };
+		7FD2D56218DE955600EE682D /* g7.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = g7.png; sourceTree = "<group>"; };
+		7FD2D56318DE955600EE682D /* g6.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = g6.png; sourceTree = "<group>"; };
+		7FD2D56418DE955600EE682D /* g5.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = g5.png; sourceTree = "<group>"; };
+		7FD2D56518DE955600EE682D /* g4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = g4.png; sourceTree = "<group>"; };
+		7FD2D56618DE955600EE682D /* g3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = g3.png; sourceTree = "<group>"; };
+		7FD2D56718DE955600EE682D /* g2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = g2.png; sourceTree = "<group>"; };
+		7FD2D56918DE955600EE682D /* g1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = g1.png; sourceTree = "<group>"; };
+		7FD2D57418DE959300EE682D /* peripheral.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = peripheral.jpg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -117,6 +140,16 @@
 		7F3A3B7818DBE4FC009B342D = {
 			isa = PBXGroup;
 			children = (
+				7FD2D57418DE959300EE682D /* peripheral.jpg */,
+				7FD2D56018DE955600EE682D /* g9.png */,
+				7FD2D56118DE955600EE682D /* g8.png */,
+				7FD2D56218DE955600EE682D /* g7.png */,
+				7FD2D56318DE955600EE682D /* g6.png */,
+				7FD2D56418DE955600EE682D /* g5.png */,
+				7FD2D56518DE955600EE682D /* g4.png */,
+				7FD2D56618DE955600EE682D /* g3.png */,
+				7FD2D56718DE955600EE682D /* g2.png */,
+				7FD2D56918DE955600EE682D /* g1.png */,
 				7F3A3BB918DBE501009B342D /* Classes */,
 				7F3A3B8A18DBE4FC009B342D /* MYBluetoothBlocks */,
 				7F3A3BA918DBE4FC009B342D /* MYBluetoothBlocksTests */,
@@ -148,6 +181,8 @@
 		7F3A3B8A18DBE4FC009B342D /* MYBluetoothBlocks */ = {
 			isa = PBXGroup;
 			children = (
+				7FD2D55718DE85A500EE682D /* UIView+UIView_NibStyle.h */,
+				7FD2D55818DE85A500EE682D /* UIView+UIView_NibStyle.m */,
 				7FD2D4FC18DDE4E800EE682D /* MYUUID.h */,
 				7F3A3B9318DBE4FC009B342D /* MYAppDelegate.h */,
 				7F3A3B9418DBE4FC009B342D /* MYAppDelegate.m */,
@@ -303,9 +338,19 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7FD2D57318DE955600EE682D /* g1.png in Resources */,
+				7FD2D56B18DE955600EE682D /* g8.png in Resources */,
+				7FD2D56F18DE955600EE682D /* g4.png in Resources */,
+				7FD2D56C18DE955600EE682D /* g7.png in Resources */,
+				7FD2D57518DE959300EE682D /* peripheral.jpg in Resources */,
 				7F3A3B9D18DBE4FC009B342D /* Images.xcassets in Resources */,
+				7FD2D56A18DE955600EE682D /* g9.png in Resources */,
+				7FD2D57018DE955600EE682D /* g3.png in Resources */,
 				7F3A3B8F18DBE4FC009B342D /* InfoPlist.strings in Resources */,
+				7FD2D56E18DE955600EE682D /* g5.png in Resources */,
 				7F3A3B9818DBE4FC009B342D /* Main.storyboard in Resources */,
+				7FD2D57118DE955600EE682D /* g2.png in Resources */,
+				7FD2D56D18DE955600EE682D /* g6.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -338,6 +383,7 @@
 				7FD2D4E918DD2E3100EE682D /* MYBluetoothBlocksSubscriber.m in Sources */,
 				7FD2D4EF18DD3DA800EE682D /* MYSubscriberViewController.m in Sources */,
 				7F3A3BC918DBE51C009B342D /* MYBluetoothBlocksPeripheral.m in Sources */,
+				7FD2D55918DE85A500EE682D /* UIView+UIView_NibStyle.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

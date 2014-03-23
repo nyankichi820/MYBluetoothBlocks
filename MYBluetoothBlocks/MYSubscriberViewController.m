@@ -29,7 +29,7 @@
     
     self.subscriber = [[MYBluetoothBlocksServer shared].subscribers objectAtIndex:self.rowIndex];
     
-
+    
     // Do any additional setup after loading the view.
 }
 
@@ -43,6 +43,14 @@
 
 
 
+- (BOOL)textFieldShouldReturn:(UITextField*)textField
+
+{
+    [textField resignFirstResponder];
+    
+    return YES;
+    
+}
 
 
 - (void)didReceiveMemoryWarning
