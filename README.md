@@ -10,7 +10,7 @@ Core Bluetooth wrapper with block and simple interface wrapper
 
 instal from cocoapods
 
-  pod 'MYRoutes', '~> 0.1.0'
+  pod 'MYBluetoothBlocks', '~> 0.1.0'
 
 # Usage
 
