@@ -14,6 +14,9 @@ instal from cocoapods
 
 # Usage
 
+## Sample Movie
+
+http://youtu.be/l0EUo7nGNDg
 
 
 ## Server(Peripheral) 
