@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "MYBluetoothBlocks"
-  s.version      = "0.1.0"
+  s.version      = "0.1.1"
   s.summary      = "Core Bluetooth wrapper with block and simple interface wrapper"
   s.requires_arc = true
 
@@ -8,6 +8,7 @@ Pod::Spec.new do |s|
                     Core Bluetooth wrapper with block and simple interface wrapper
                     - blocks coding
                     - core bluetooth is very complex flow. more simple interface wrapper. 
+                    - beacon and beacon client
                    DESC
 
   s.homepage     = "https://github.com/nyankichi820/MYBluetoothBlocks"
