@@ -66,9 +66,10 @@ static MYBluetoothBlocksClient *instance = 0;
         {
             
             NSLog(@"CLIENT: didDiscoverService UUID %@", [ service UUID]);
-            
-            
-            if([weakSelf.serviceUUIDs containsObject:service.UUID]){
+            if(!weakSelf.serviceUUIDs){
+                [weakSelf discoverCharacteristics:service characteristics:weakSelf.characteristics];
+            }
+            else if([weakSelf.serviceUUIDs containsObject:service.UUID]){
                 
                 [weakSelf discoverCharacteristics:service characteristics:weakSelf.characteristics];
             }

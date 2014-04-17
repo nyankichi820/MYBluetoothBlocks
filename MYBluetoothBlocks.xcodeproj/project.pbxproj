@@ -25,6 +25,10 @@
 		7F3A3BC718DBE51C009B342D /* MYBluetoothBlocksServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3A3BC018DBE51C009B342D /* MYBluetoothBlocksServer.m */; };
 		7F3A3BC818DBE51C009B342D /* MYBluetoothBlocksCentral.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3A3BC218DBE51C009B342D /* MYBluetoothBlocksCentral.m */; };
 		7F3A3BC918DBE51C009B342D /* MYBluetoothBlocksPeripheral.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F3A3BC418DBE51C009B342D /* MYBluetoothBlocksPeripheral.m */; };
+		7F7F9EA818FEE17B00179FB9 /* MYBeaconBlocksClient.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7F9EA718FEE17B00179FB9 /* MYBeaconBlocksClient.m */; };
+		7F7F9EAB18FF569700179FB9 /* MYBeaconBlocksServer.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7F9EAA18FF569700179FB9 /* MYBeaconBlocksServer.m */; };
+		7F7F9EAE18FF570900179FB9 /* MYBeaconServerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7F9EAD18FF570900179FB9 /* MYBeaconServerViewController.m */; };
+		7F7F9EB118FF6B1000179FB9 /* MYBeaconMonitorViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7F7F9EB018FF6B1000179FB9 /* MYBeaconMonitorViewController.m */; };
 		7FD2D4E918DD2E3100EE682D /* MYBluetoothBlocksSubscriber.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2D4E818DD2E3100EE682D /* MYBluetoothBlocksSubscriber.m */; };
 		7FD2D4EC18DD3CF300EE682D /* MYChildClientViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2D4EB18DD3CF300EE682D /* MYChildClientViewController.m */; };
 		7FD2D4EF18DD3DA800EE682D /* MYSubscriberViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 7FD2D4EE18DD3DA800EE682D /* MYSubscriberViewController.m */; };
@@ -84,6 +88,14 @@
 		7F3A3BC218DBE51C009B342D /* MYBluetoothBlocksCentral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYBluetoothBlocksCentral.m; sourceTree = "<group>"; };
 		7F3A3BC318DBE51C009B342D /* MYBluetoothBlocksPeripheral.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYBluetoothBlocksPeripheral.h; sourceTree = "<group>"; };
 		7F3A3BC418DBE51C009B342D /* MYBluetoothBlocksPeripheral.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYBluetoothBlocksPeripheral.m; sourceTree = "<group>"; };
+		7F7F9EA618FEE17B00179FB9 /* MYBeaconBlocksClient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYBeaconBlocksClient.h; sourceTree = "<group>"; };
+		7F7F9EA718FEE17B00179FB9 /* MYBeaconBlocksClient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYBeaconBlocksClient.m; sourceTree = "<group>"; };
+		7F7F9EA918FF569700179FB9 /* MYBeaconBlocksServer.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYBeaconBlocksServer.h; sourceTree = "<group>"; };
+		7F7F9EAA18FF569700179FB9 /* MYBeaconBlocksServer.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYBeaconBlocksServer.m; sourceTree = "<group>"; };
+		7F7F9EAC18FF570900179FB9 /* MYBeaconServerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYBeaconServerViewController.h; sourceTree = "<group>"; };
+		7F7F9EAD18FF570900179FB9 /* MYBeaconServerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYBeaconServerViewController.m; sourceTree = "<group>"; };
+		7F7F9EAF18FF6B1000179FB9 /* MYBeaconMonitorViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYBeaconMonitorViewController.h; sourceTree = "<group>"; };
+		7F7F9EB018FF6B1000179FB9 /* MYBeaconMonitorViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYBeaconMonitorViewController.m; sourceTree = "<group>"; };
 		7FD2D4E718DD2E3100EE682D /* MYBluetoothBlocksSubscriber.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYBluetoothBlocksSubscriber.h; sourceTree = "<group>"; };
 		7FD2D4E818DD2E3100EE682D /* MYBluetoothBlocksSubscriber.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MYBluetoothBlocksSubscriber.m; sourceTree = "<group>"; };
 		7FD2D4EA18DD3CF300EE682D /* MYChildClientViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MYChildClientViewController.h; sourceTree = "<group>"; };
@@ -193,6 +205,10 @@
 				7FD2D4F718DDE43400EE682D /* MYClientViewController.m */,
 				7FD2D4F918DDE48D00EE682D /* MYServerViewController.h */,
 				7FD2D4FA18DDE48D00EE682D /* MYServerViewController.m */,
+				7F7F9EAC18FF570900179FB9 /* MYBeaconServerViewController.h */,
+				7F7F9EAD18FF570900179FB9 /* MYBeaconServerViewController.m */,
+				7F7F9EAF18FF6B1000179FB9 /* MYBeaconMonitorViewController.h */,
+				7F7F9EB018FF6B1000179FB9 /* MYBeaconMonitorViewController.m */,
 				7FD2D4EA18DD3CF300EE682D /* MYChildClientViewController.h */,
 				7FD2D4EB18DD3CF300EE682D /* MYChildClientViewController.m */,
 				7FD2D4ED18DD3DA800EE682D /* MYSubscriberViewController.h */,
@@ -250,6 +266,10 @@
 				7F3A3BC218DBE51C009B342D /* MYBluetoothBlocksCentral.m */,
 				7F3A3BC318DBE51C009B342D /* MYBluetoothBlocksPeripheral.h */,
 				7F3A3BC418DBE51C009B342D /* MYBluetoothBlocksPeripheral.m */,
+				7F7F9EA618FEE17B00179FB9 /* MYBeaconBlocksClient.h */,
+				7F7F9EA718FEE17B00179FB9 /* MYBeaconBlocksClient.m */,
+				7F7F9EA918FF569700179FB9 /* MYBeaconBlocksServer.h */,
+				7F7F9EAA18FF569700179FB9 /* MYBeaconBlocksServer.m */,
 			);
 			path = Classes;
 			sourceTree = "<group>";
@@ -371,6 +391,7 @@
 			files = (
 				7FD2D4EC18DD3CF300EE682D /* MYChildClientViewController.m in Sources */,
 				7FD2D4F218DD401B00EE682D /* MYSubscribersTableViewController.m in Sources */,
+				7F7F9EB118FF6B1000179FB9 /* MYBeaconMonitorViewController.m in Sources */,
 				7F3A3BC818DBE51C009B342D /* MYBluetoothBlocksCentral.m in Sources */,
 				7F3A3B9B18DBE4FC009B342D /* MYViewController.m in Sources */,
 				7F3A3B9518DBE4FC009B342D /* MYAppDelegate.m in Sources */,
@@ -381,7 +402,10 @@
 				7F3A3B9118DBE4FC009B342D /* main.m in Sources */,
 				7FD2D4F818DDE43400EE682D /* MYClientViewController.m in Sources */,
 				7FD2D4E918DD2E3100EE682D /* MYBluetoothBlocksSubscriber.m in Sources */,
+				7F7F9EA818FEE17B00179FB9 /* MYBeaconBlocksClient.m in Sources */,
 				7FD2D4EF18DD3DA800EE682D /* MYSubscriberViewController.m in Sources */,
+				7F7F9EAB18FF569700179FB9 /* MYBeaconBlocksServer.m in Sources */,
+				7F7F9EAE18FF570900179FB9 /* MYBeaconServerViewController.m in Sources */,
 				7F3A3BC918DBE51C009B342D /* MYBluetoothBlocksPeripheral.m in Sources */,
 				7FD2D55918DE85A500EE682D /* UIView+UIView_NibStyle.m in Sources */,
 			);

@@ -69,9 +69,9 @@
 
 -(void) searchPeripheral{
     NSLog(@"CENTRAL: searchPeripheral");
-    /*
+    
      NSDictionary *options = [NSDictionary dictionaryWithObjectsAndKeys:[NSNumber numberWithBool:FALSE], CBCentralManagerScanOptionAllowDuplicatesKey, nil];
-     */
+     
     [self.centralManager scanForPeripheralsWithServices:self.serviceUUIDs options:nil];
     self.isSearhing = YES;
 }

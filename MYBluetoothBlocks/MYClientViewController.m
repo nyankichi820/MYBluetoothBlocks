@@ -36,8 +36,9 @@
 
 -(void)setup{
     MYBluetoothBlocksClient *client = [MYBluetoothBlocksClient shared];
-    [client setupRootClient:@[[CBUUID UUIDWithString:kCBUUIDTestService]]];
+  //  [client setupRootClient:@[[CBUUID UUIDWithString:kCBUUIDTestService]]];
     
+    [client setupRootClient:nil];
     
     
     

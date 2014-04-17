@@ -13,7 +13,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Jlw-mn-hgn">
-                                <rect key="frame" x="0.0" y="65" width="320" height="261"/>
+                                <rect key="frame" x="0.0" y="64" width="320" height="127"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.76078431369999999" green="0.2666666667" blue="0.27058823529999998" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -26,7 +26,7 @@
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="N6n-kN-0BR">
-                                <rect key="frame" x="0.0" y="326" width="320" height="261"/>
+                                <rect key="frame" x="0.0" y="191" width="320" height="126"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="0.80000000000000004" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="40"/>
@@ -38,6 +38,32 @@
                                     <segue destination="rD5-cb-iRZ" kind="push" id="0d0-kN-Ret"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="KFD-OV-fFv">
+                                <rect key="frame" x="0.0" y="317" width="320" height="126"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.1019607843" green="0.73725490199999999" blue="0.61176470589999998" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="Beacon">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="SDN-3H-UHh" kind="push" id="UtS-6l-2V5"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="LqN-DO-pav">
+                                <rect key="frame" x="0.0" y="442" width="320" height="126"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="40"/>
+                                <state key="normal" title="BeaconMonitor">
+                                    <color key="titleColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <segue destination="IMw-Ao-7Cb" kind="push" id="Wjp-Tq-of3"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -45,7 +71,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="x5A-6p-PRh" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-443" y="-210"/>
+            <point key="canvasLocation" x="-625" y="-238"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="B4z-EQ-6IC">
@@ -60,7 +86,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="NwI-Nr-jVv" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-889" y="-218"/>
+            <point key="canvasLocation" x="-1071" y="-246"/>
         </scene>
         <!--Child Client Table View Controller - Peripheral List-->
         <scene sceneID="faO-Kb-JoN">
@@ -92,7 +118,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="BI2-Gh-VGF" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="340" y="410"/>
+            <point key="canvasLocation" x="434" y="404"/>
         </scene>
         <!--Child Client View Controller - Peripheral-->
         <scene sceneID="QFg-Hn-NwV">
@@ -420,7 +446,92 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="bVM-a9-VOo" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-67" y="410"/>
+            <point key="canvasLocation" x="-13" y="410"/>
+        </scene>
+        <!--Beacon Server View Controller - Beacon-->
+        <scene sceneID="7K2-i0-fk1">
+            <objects>
+                <viewController id="SDN-3H-UHh" customClass="MYBeaconServerViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="xL7-oZ-fgG">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="not ready" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="dNu-jH-XER">
+                                <rect key="frame" x="10" y="158" width="300" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="Fww-9T-Q9T">
+                                <rect key="frame" x="10" y="80" width="300" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleBeaconServer:" destination="SDN-3H-UHh" eventType="touchUpInside" id="y75-58-PP0"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Beacon" id="jeJ-Ve-8tC"/>
+                    <connections>
+                        <outlet property="peripheralRunButton" destination="Fww-9T-Q9T" id="qem-16-dYH"/>
+                        <outlet property="peripheralStatus" destination="dNu-jH-XER" id="d1Y-4L-fSY"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CLy-GM-kAf" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-515" y="988"/>
+        </scene>
+        <!--Beacon Monitor View Controller - Beacon Monitor-->
+        <scene sceneID="odF-nI-VU1">
+            <objects>
+                <viewController id="IMw-Ao-7Cb" customClass="MYBeaconMonitorViewController" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="pLT-G9-v44">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="5QF-DH-nEr">
+                                <rect key="frame" x="10" y="83" width="300" height="40"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.96862745100000003" green="0.96862745100000003" blue="0.96862745100000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Start">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="toggleClient:" destination="IMw-Ao-7Cb" eventType="touchUpInside" id="Sit-eX-HKV"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="not ready" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="VxK-Gt-zIP">
+                                <rect key="frame" x="12" y="154" width="288" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="beacons : 0" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" enabled="NO" adjustsFontSizeToFit="NO" id="w1u-4l-ljO">
+                                <rect key="frame" x="10" y="338" width="300" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="Beacon Monitor" id="UxK-cv-flU"/>
+                    <connections>
+                        <outlet property="centralPeripheralsCount" destination="w1u-4l-ljO" id="ieO-FH-ftz"/>
+                        <outlet property="centralRunButton" destination="5QF-DH-nEr" id="ck7-oh-tpC"/>
+                        <outlet property="centralStatus" destination="VxK-Gt-zIP" id="PtO-mr-qBf"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="xMB-OS-ODi" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="111" y="1101"/>
         </scene>
     </scenes>
     <resources>

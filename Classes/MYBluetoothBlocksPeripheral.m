@@ -22,10 +22,22 @@
 
 -(void)startPeripheral{
     NSLog(@"PERIPHERAL: start peripheral");
-   self.peripheralManager =   [[CBPeripheralManager alloc] initWithDelegate:self queue:nil];
+    
+    NSMutableArray *UUIDs = [[NSMutableArray alloc] init];
+    for(CBService *service in self.services){
+        [UUIDs addObject:service.UUID];
+    }
+    self.advertiseInfo = @{ CBAdvertisementDataLocalNameKey : self.localName, CBAdvertisementDataServiceUUIDsKey : UUIDs};
+    
+    self.peripheralManager =   [[CBPeripheralManager alloc] initWithDelegate:self queue:nil];
     self.isRunning = TRUE;
+    
 
 }
+
+
+
+
 
 -(void)startPeripheralWithIdentifier:(NSString*)restoreIdentifirer{
     NSLog(@"PERIPHERAL: start peripheral");
@@ -57,11 +69,7 @@
 - (void)advertiseServices {
     NSLog(@"PERIPHERAL: advertise");
     
-    NSMutableArray *UUIDs = [[NSMutableArray alloc] init];
-    for(CBService *service in self.services){
-        [UUIDs addObject:service.UUID];
-    }
-    [self.peripheralManager startAdvertising:@{ CBAdvertisementDataLocalNameKey : self.localName, CBAdvertisementDataServiceUUIDsKey : UUIDs}];
+    [self.peripheralManager startAdvertising:self.advertiseInfo];
     
 }
 

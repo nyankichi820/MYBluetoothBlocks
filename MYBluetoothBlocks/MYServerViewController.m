@@ -54,7 +54,7 @@
     
     
     MYBluetoothBlocksServer *server = [MYBluetoothBlocksServer shared];
-    [server setupServer:@"my bt" services:services];
+    [server setupServer:@"CASIO GB-6900B" services:services];
     
    
     
@@ -152,7 +152,6 @@
         self.checkSubscriberButton.enabled = NO;
     }
 }
-
 
 
 @end
